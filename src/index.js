@@ -26,6 +26,7 @@ const createPaginatedPages = (posts, createPage, template, post) => {
       component: template,
       context: {
         group,
+        pathPrefix: post,
         first: isFirstPage(index),
         last: isLastPage(index, groups),
         index: index + 1
